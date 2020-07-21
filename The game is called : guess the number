@@ -1,0 +1,23 @@
+attempts = 0
+comp_number = rand.randint(1, 50)
+while attempts < 6:
+    attempts += 1
+    number = int(input("Enter your number (from 1 to 50) : "))
+    if number < 1 or number > 50:
+        print(f"You tried to enter {number}. Allowed from 1 to 50!")
+        continue
+
+    if number > comp_number:
+        print(f"{number} is bigger than computer random number ")
+        continue
+
+    if number < comp_number:
+        print(f"{number} is lower than computer random number ")
+        continue
+
+    if number == comp_number:
+        print(f"You win this game, random number is {comp_number}")
+        break
+
+if attempts == 6:
+    print("Your attempts are over...")
